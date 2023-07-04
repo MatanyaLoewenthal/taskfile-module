@@ -2,7 +2,7 @@ version: '3'
 
 tasks:
   default:
-    deps: [ci-lint, ci-test, ci-build, ci-helm-lint]
+    deps: [ci-lint, ci-test, ci-build]
 
   ci-lint:
     cmds:

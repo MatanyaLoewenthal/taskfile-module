@@ -8,8 +8,8 @@ tasks:
       - docker buildx build . --push --tag {{.IMAGE_NAME}}
         --cache-to type=registry,ref={{.IMAGE_NAME}}:cache 
         --cache-from type=registry,ref={{.IMAGE_NAME}}:cache
-        --cache-to type=local,dest=task/cache
-        --cache-from type=local,src=task/cache
+        --cache-to type=local,dest=.cache
+        --cache-from type=local,src=.cache
 
   go:
     cmds:

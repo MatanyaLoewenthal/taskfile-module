@@ -5,12 +5,9 @@ tasks:
     deps: [fmt, lint]
   fmt:
     deps: [go-fmt]
-    aliases: [fmt, format]
   lint:
     deps: [go-lint, helm-lint]
   
-  go:
-    deps: [go-fmt, go-vet, go-lint]
   go-fmt:
     cmds:
       - go fmt {{.SRC}}
